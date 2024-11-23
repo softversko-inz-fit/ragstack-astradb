@@ -221,7 +221,7 @@ def load_model():
     # Get the OpenAI Chat Model
     return ChatOpenAI(
         temperature=0.3,
-        model='gpt-4-1106-preview',
+        model='gpt-4o-mini',
         streaming=True,
         verbose=True
     )
@@ -277,7 +277,7 @@ def describeImage(image_bin, language):
     print ("describeImage")
     image_base64 = base64.b64encode(image_bin).decode()
     response = openai.chat.completions.create(
-        model="gpt-4-vision-preview",
+        model="gpt-4o-mini",
         messages=[
             {
             "role": "user",
